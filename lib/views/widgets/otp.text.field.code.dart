@@ -1,0 +1,39 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
+
+class SendOtpCode extends StatelessWidget {
+  const SendOtpCode({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: OtpTextField(
+        numberOfFields: 4,
+        borderColor: Color(0xF00000),
+        //set to true to show as box or false to show as dash
+        showFieldAsBox: true,
+        //runs when a code is typed in
+        onCodeChanged: (String code) {
+          //handle validation or checks here
+        },
+        //runs when every textfield is filled
+        onSubmit: (String verificationCode) {
+          showDialog(
+              context: context,
+              builder: (context) {
+                return AlertDialog(
+                  title: Text(
+                    "به آیدی ملک خوش آمدید",
+                    style: TextStyle(fontFamily: 'dana'),
+                  ),
+                  content: Text(
+                    'تمامی حقوق اپلیکیشن مربوط به آیدی ملک می‌باشد \n کد وارد شده توسط شما $verificationCode',
+                    style: TextStyle(fontFamily: 'dana'),
+                  ),
+                );
+              });
+        }, // end onSubmit
+      ),
+    );
+  }
+}
