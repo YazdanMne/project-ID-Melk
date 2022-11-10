@@ -143,7 +143,7 @@ class HomePageMain extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => VideoScreen(
-                                name: e['name'], mediaUrl: e['media_url']))),
+                                name: e['name']!, mediaUrl: e['media_url']!))),
                     child: Image.network(e['thumb_url']!),
                   ))
               .toList(),
