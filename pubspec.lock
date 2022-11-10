@@ -78,13 +78,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "6.1.4"
-  floating_chat_button:
-    dependency: "direct main"
-    description:
-      name: floating_chat_button
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.1"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -97,6 +90,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.1"
+  flutter_speed_dial:
+    dependency: "direct main"
+    description:
+      name: flutter_speed_dial
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "6.2.0"
   flutter_spinkit:
     dependency: "direct main"
     description:

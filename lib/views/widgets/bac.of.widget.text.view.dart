@@ -63,3 +63,35 @@ class BacgruondShapeMainTxt extends StatelessWidget {
     );
   }
 }
+
+// class BacgruondQuastion extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Material(
+//       color: Color.fromARGB(255, 235, 0, 0),
+//       shape: SuperellipseShape(
+//         borderRadius: BorderRadius.circular(20),
+//       ), // SuperellipseShape
+//       child: Container(
+//         width: 190.0,
+//         height: 50.0,
+//       ), // Container
+//     ); // Material
+//   }
+// }
+
+// class BacgruondQuastion2 extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Material(
+//       color: Color.fromARGB(255, 117, 102, 13),
+//       shape: SuperellipseShape(
+//         borderRadius: BorderRadius.circular(20),
+//       ), // SuperellipseShape
+//       child: Container(
+//         width: 190.0,
+//         height: 50.0,
+//       ), // Container
+//     ); // Material
+//   }
+// }
