@@ -78,13 +78,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "6.1.4"
-  floating_action_bubble:
+  floating_chat_button:
     dependency: "direct main"
     description:
-      name: floating_action_bubble
+      name: floating_chat_button
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.1.4"
+    version: "1.0.1"
   flutter:
     dependency: "direct main"
     description: flutter

@@ -43,7 +43,8 @@ dependencies:
   msh_checkbox: ^1.1.1
   flutter_otp_text_field: ^1.1.1
   webview_flutter: ^3.0.4
-  floating_action_bubble: ^1.1.4
+  floating_chat_button: ^1.0.1
+
 
 
  
