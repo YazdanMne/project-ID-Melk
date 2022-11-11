@@ -44,6 +44,13 @@ dependencies:
   flutter_otp_text_field: ^1.1.1
   webview_flutter: ^3.0.4
   flutter_speed_dial: ^6.2.0
+  url_launcher: ^6.1.6
+
+
+
+ 
+
+
   
   
   

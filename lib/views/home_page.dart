@@ -1,7 +1,10 @@
+import 'dart:ffi';
+import 'dart:io';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
+import 'package:get/get.dart';
 import 'package:id_melk_project/views/widgets/bac.buy.dart';
 import 'package:id_melk_project/views/widgets/button.ask.buy.dart';
 import 'package:id_melk_project/views/widgets/button.ask.rent.dart';
@@ -15,6 +18,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:id_melk_project/views/widgets/quastion.page.dart';
 import 'package:id_melk_project/views/widgets/shape.bac.dart';
 import 'package:id_melk_project/views/widgets/video_palayer.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 import 'not.page.dart';
@@ -75,6 +79,29 @@ class HomePageMain extends StatelessWidget {
               ),
               SliverList(
                   delegate: SliverChildListDelegate([
+                SizedBox(
+                  height: 20,
+                ),
+                Center(
+                  child: Column(
+                    children: [
+                      ElevatedButton.icon(
+                        onPressed: () {
+                          launchUrl(Uri.parse('https://idmelk.com/'));
+                        },
+                        icon: Icon(Icons.language_sharp),
+                        label: Text(
+                          'رفتن به سایت اصلی آیدی ملک',
+                          style: TextStyle(fontFamily: 'dana'),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.green,
+                          // minimumSize: Size(100.0, 45.0),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
                 SizedBox(
                   height: 20,
                 ),
@@ -366,292 +393,6 @@ class HomePageMain extends StatelessWidget {
                           ],
                         ),
                         SizedBox(height: 20),
-                        Stack(
-                          children: [
-                            BacTxtLrm(),
-                            Positioned(
-                              left: 20,
-                              top: 5,
-                              child: Directionality(
-                                textDirection: TextDirection.rtl,
-                                child: Text(
-                                  'لورم اپسیوم یک متن آزمایشی مخصوص طراحان میباشد',
-                                  style: TextStyle(
-                                    fontFamily: 'dana',
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 20,
-                              top: 40,
-                              child: Directionality(
-                                textDirection: TextDirection.rtl,
-                                child: Text(
-                                  'لورم اپسیوم یک متن آزمایشی مخصوص طراحان میباشد',
-                                  style: TextStyle(
-                                    fontFamily: 'dana',
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 20,
-                              top: 80,
-                              child: Directionality(
-                                textDirection: TextDirection.rtl,
-                                child: Text(
-                                  'لورم اپسیوم یک متن آزمایشی مخصوص طراحان میباشد',
-                                  style: TextStyle(
-                                    fontFamily: 'dana',
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 20,
-                              top: 120,
-                              child: Directionality(
-                                textDirection: TextDirection.rtl,
-                                child: Text(
-                                  'لورم اپسیوم یک متن آزمایشی مخصوص طراحان میباشد',
-                                  style: TextStyle(
-                                    fontFamily: 'dana',
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 20,
-                              top: 160,
-                              child: Directionality(
-                                textDirection: TextDirection.rtl,
-                                child: Text(
-                                  'لورم اپسیوم یک متن آزمایشی مخصوص طراحان میباشد',
-                                  style: TextStyle(
-                                    fontFamily: 'dana',
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 20),
-                        Stack(
-                          children: [
-                            BacTxtLrm(),
-                            Positioned(
-                              left: 20,
-                              top: 5,
-                              child: Directionality(
-                                textDirection: TextDirection.rtl,
-                                child: Text(
-                                  'لورم اپسیوم یک متن آزمایشی مخصوص طراحان میباشد',
-                                  style: TextStyle(
-                                    fontFamily: 'dana',
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 20,
-                              top: 40,
-                              child: Directionality(
-                                textDirection: TextDirection.rtl,
-                                child: Text(
-                                  'لورم اپسیوم یک متن آزمایشی مخصوص طراحان میباشد',
-                                  style: TextStyle(
-                                    fontFamily: 'dana',
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 20,
-                              top: 80,
-                              child: Directionality(
-                                textDirection: TextDirection.rtl,
-                                child: Text(
-                                  'لورم اپسیوم یک متن آزمایشی مخصوص طراحان میباشد',
-                                  style: TextStyle(
-                                    fontFamily: 'dana',
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 20,
-                              top: 120,
-                              child: Directionality(
-                                textDirection: TextDirection.rtl,
-                                child: Text(
-                                  'لورم اپسیوم یک متن آزمایشی مخصوص طراحان میباشد',
-                                  style: TextStyle(
-                                    fontFamily: 'dana',
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 20,
-                              top: 160,
-                              child: Directionality(
-                                textDirection: TextDirection.rtl,
-                                child: Text(
-                                  'لورم اپسیوم یک متن آزمایشی مخصوص طراحان میباشد',
-                                  style: TextStyle(
-                                    fontFamily: 'dana',
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 20),
-                        Stack(
-                          children: [
-                            BacTxtLrm(),
-                            Positioned(
-                              left: 20,
-                              top: 5,
-                              child: Directionality(
-                                textDirection: TextDirection.rtl,
-                                child: Text(
-                                  'لورم اپسیوم یک متن آزمایشی مخصوص طراحان میباشد',
-                                  style: TextStyle(
-                                    fontFamily: 'dana',
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 20,
-                              top: 40,
-                              child: Directionality(
-                                textDirection: TextDirection.rtl,
-                                child: Text(
-                                  'لورم اپسیوم یک متن آزمایشی مخصوص طراحان میباشد',
-                                  style: TextStyle(
-                                    fontFamily: 'dana',
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 20,
-                              top: 80,
-                              child: Directionality(
-                                textDirection: TextDirection.rtl,
-                                child: Text(
-                                  'لورم اپسیوم یک متن آزمایشی مخصوص طراحان میباشد',
-                                  style: TextStyle(
-                                    fontFamily: 'dana',
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 20,
-                              top: 120,
-                              child: Directionality(
-                                textDirection: TextDirection.rtl,
-                                child: Text(
-                                  'لورم اپسیوم یک متن آزمایشی مخصوص طراحان میباشد',
-                                  style: TextStyle(
-                                    fontFamily: 'dana',
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 20,
-                              top: 160,
-                              child: Directionality(
-                                textDirection: TextDirection.rtl,
-                                child: Text(
-                                  'لورم اپسیوم یک متن آزمایشی مخصوص طراحان میباشد',
-                                  style: TextStyle(
-                                    fontFamily: 'dana',
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 20),
-                        Stack(
-                          children: [
-                            BacTxtLrm(),
-                            Positioned(
-                              left: 20,
-                              top: 5,
-                              child: Directionality(
-                                textDirection: TextDirection.rtl,
-                                child: Text(
-                                  'لورم اپسیوم یک متن آزمایشی مخصوص طراحان میباشد',
-                                  style: TextStyle(
-                                    fontFamily: 'dana',
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 20,
-                              top: 40,
-                              child: Directionality(
-                                textDirection: TextDirection.rtl,
-                                child: Text(
-                                  'لورم اپسیوم یک متن آزمایشی مخصوص طراحان میباشد',
-                                  style: TextStyle(
-                                    fontFamily: 'dana',
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 20,
-                              top: 80,
-                              child: Directionality(
-                                textDirection: TextDirection.rtl,
-                                child: Text(
-                                  'لورم اپسیوم یک متن آزمایشی مخصوص طراحان میباشد',
-                                  style: TextStyle(
-                                    fontFamily: 'dana',
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 20,
-                              top: 120,
-                              child: Directionality(
-                                textDirection: TextDirection.rtl,
-                                child: Text(
-                                  'لورم اپسیوم یک متن آزمایشی مخصوص طراحان میباشد',
-                                  style: TextStyle(
-                                    fontFamily: 'dana',
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 20,
-                              top: 160,
-                              child: Directionality(
-                                textDirection: TextDirection.rtl,
-                                child: Text(
-                                  'لورم اپسیوم یک متن آزمایشی مخصوص طراحان میباشد',
-                                  style: TextStyle(
-                                    fontFamily: 'dana',
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
                         Text(
                           '«From ID MELK 2022 ©»',
                         ),
