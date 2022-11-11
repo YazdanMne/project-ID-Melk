@@ -497,3 +497,33 @@ class BacgroundBuyHouse extends StatelessWidget {
     );
   }
 }
+
+class LoremTxt extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Color.fromARGB(255, 63, 225, 125),
+      shape: SuperellipseShape(
+        borderRadius: BorderRadius.circular(10),
+      ), // SuperellipseShape
+      child: Container(
+        width: 350.0,
+        height: 200.0,
+      ), // Container
+    ); // Material
+  }
+}
+
+class BacTxtLrm extends StatelessWidget {
+  const BacTxtLrm({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(10),
+        child: LoremTxt(),
+      ),
+    );
+  }
+}

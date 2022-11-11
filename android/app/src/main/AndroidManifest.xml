@@ -3,7 +3,7 @@
     <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:usesCleartextTraffic="true"
-        android:label="id_melk_project"
+        android:label="ID Melk"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

@@ -43,7 +43,7 @@ class Quastion extends StatelessWidget {
         ],
       ),
       body: SafeArea(
-        child: Container(
+        child: SingleChildScrollView(
           child: Center(
             child: Column(
               children: [
@@ -72,6 +72,9 @@ class Quastion extends StatelessWidget {
                 Text(
                   '«From ID MELK 2022 ©»',
                 ),
+                SizedBox(
+                  height: 30,
+                )
               ],
             ),
           ),
