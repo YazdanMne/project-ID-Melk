@@ -410,7 +410,7 @@ class BacLogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Color.fromARGB(255, 255, 255, 255),
+      color: Color(0xfaF2E7D5),
       shape: SuperellipseShape(
         borderRadius: BorderRadius.circular(0),
       ), // SuperellipseShape

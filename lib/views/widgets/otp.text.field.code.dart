@@ -9,9 +9,15 @@ class SendOtpCode extends StatelessWidget {
     return Container(
       child: OtpTextField(
         numberOfFields: 4,
-        borderColor: Color(0xF00000),
+        // borderColor: Color(0xff000000),
+        // cursorColor: Color(0xff0000000),
+        // disabledBorderColor: Color(0xffff0000),
+        fillColor: Color(0xffF7F7F7),
+        //focusedBorderColor: Color(0xff6D9886),
+        enabledBorderColor: Color.fromARGB(57, 0, 0, 0),
         //set to true to show as box or false to show as dash
         showFieldAsBox: true,
+        filled: true,
         //runs when a code is typed in
         onCodeChanged: (String code) {
           //handle validation or checks here

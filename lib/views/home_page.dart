@@ -32,7 +32,7 @@ class HomePageMain extends StatelessWidget {
       home: Scaffold(
         floatingActionButton: SpeedDial(
           animatedIcon: AnimatedIcons.menu_close,
-          backgroundColor: Colors.red,
+          backgroundColor: Color(0xfa393E46),
           children: [
             SpeedDialChild(
               child: Icon(Icons.add),
@@ -40,7 +40,7 @@ class HomePageMain extends StatelessWidget {
               onTap: () => Navigator.push(
                   context, MaterialPageRoute(builder: (context) => Quastion())),
               labelStyle: TextStyle(fontFamily: 'dana'),
-              backgroundColor: Colors.green,
+              backgroundColor: Color(0xfa6D9886),
               labelBackgroundColor: Colors.white,
             ),
             SpeedDialChild(
@@ -49,14 +49,14 @@ class HomePageMain extends StatelessWidget {
               onTap: () => Navigator.push(
                   context, MaterialPageRoute(builder: (context) => NotePage())),
               labelStyle: TextStyle(fontFamily: 'dana'),
-              backgroundColor: Colors.cyan,
+              backgroundColor: Color(0xfa6D9886),
               labelBackgroundColor: Colors.white,
             ),
             SpeedDialChild(
               child: Icon(Icons.more_vert_outlined),
               label: 'بیشتر',
               labelStyle: TextStyle(fontFamily: 'dana'),
-              backgroundColor: Colors.cyanAccent,
+              backgroundColor: Color(0xfa6D9886),
               labelBackgroundColor: Colors.white,
             ),
           ],
@@ -68,14 +68,15 @@ class HomePageMain extends StatelessWidget {
                 flexibleSpace: FlexibleSpaceBar(
                   title: Text(
                     'Id Melk|آیدی ملک',
-                    style: TextStyle(fontFamily: 'dana'),
+                    style:
+                        TextStyle(fontFamily: 'dana', color: Color(0xfaF2E7D5)),
                   ),
 
                   //background: Image.asset('assets/images/bac.jpg'),
                 ),
                 pinned: true,
                 expandedHeight: MediaQuery.of(context).size.height * 0.150,
-                backgroundColor: Colors.red,
+                backgroundColor: Color(0xfa393E46),
               ),
               SliverList(
                   delegate: SliverChildListDelegate([
@@ -95,7 +96,7 @@ class HomePageMain extends StatelessWidget {
                           style: TextStyle(fontFamily: 'dana'),
                         ),
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.green,
+                          backgroundColor: Color(0xfa6D9886),
                           // minimumSize: Size(100.0, 45.0),
                         ),
                       ),

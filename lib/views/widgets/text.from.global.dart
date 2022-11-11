@@ -64,7 +64,7 @@ class TextFromField extends StatelessWidget {
       width: 300,
       padding: const EdgeInsets.symmetric(horizontal: 0),
       decoration: BoxDecoration(
-        color: Color.fromARGB(255, 245, 245, 245),
+        color: Color(0xfaF7F7F7),
         // boxShadow: [
         //   BoxShadow(
         //     color: Colors.black.withOpacity(0.1),

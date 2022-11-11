@@ -22,7 +22,7 @@ class ButtonGlobal extends StatelessWidget {
         alignment: Alignment.center,
         height: 55,
         decoration: BoxDecoration(
-          color: Color(0xffFF1E00),
+          color: Color(0xff6D9886),
           borderRadius: BorderRadius.circular(6),
           boxShadow: [
             BoxShadow(
@@ -37,7 +37,7 @@ class ButtonGlobal extends StatelessWidget {
             fontFamily: 'dana',
             color: Colors.white,
             fontSize: 20,
-            fontWeight: FontWeight.bold,
+            //fontWeight: FontWeight.bold,
           ),
         ),
       ),
@@ -63,7 +63,7 @@ class ButtonDone extends StatelessWidget {
         alignment: Alignment.center,
         height: 55,
         decoration: BoxDecoration(
-          color: Color(0xffFF1E00),
+          color: Color(0xff6D9886),
           borderRadius: BorderRadius.circular(6),
           boxShadow: [
             BoxShadow(
@@ -78,7 +78,7 @@ class ButtonDone extends StatelessWidget {
             fontFamily: 'dana',
             color: Colors.white,
             fontSize: 20,
-            fontWeight: FontWeight.bold,
+            // fontWeight: FontWeight.bold,
           ),
         ),
       ),
@@ -239,7 +239,7 @@ class ButtonQuastion extends StatelessWidget {
           width: 180,
           height: 50,
           decoration: BoxDecoration(
-            color: Color.fromARGB(255, 235, 0, 0),
+            color: Color(0xfa6D9886),
             borderRadius: BorderRadius.circular(6),
             boxShadow: [
               BoxShadow(
@@ -285,7 +285,7 @@ class ButtonQuastionR extends StatelessWidget {
           width: 180,
           height: 50,
           decoration: BoxDecoration(
-            color: Color.fromARGB(255, 235, 0, 0),
+            color: Color(0xfa6D9886),
             borderRadius: BorderRadius.circular(6),
             boxShadow: [
               BoxShadow(
@@ -328,7 +328,7 @@ class ButtonQuastionM extends StatelessWidget {
           width: 180,
           height: 50,
           decoration: BoxDecoration(
-            color: Color.fromARGB(255, 117, 102, 13),
+            color: Color(0xfa497174),
             borderRadius: BorderRadius.circular(6),
             boxShadow: [
               BoxShadow(
@@ -371,7 +371,7 @@ class ButtonQuastionMR extends StatelessWidget {
           width: 180,
           height: 50,
           decoration: BoxDecoration(
-            color: Color.fromARGB(255, 117, 102, 13),
+            color: Color(0xfa497174),
             borderRadius: BorderRadius.circular(6),
             boxShadow: [
               BoxShadow(

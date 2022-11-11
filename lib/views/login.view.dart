@@ -18,7 +18,7 @@ class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 230, 230, 230),
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Container(
@@ -35,10 +35,10 @@ class LoginView extends StatelessWidget {
                 Stack(children: [
                   BacgroungLoginPage(),
                   Positioned(
-                    left: 100,
+                    left: 120,
                     top: 20,
                     child: Text(
-                      'خوش آمدید به آیدی ملک',
+                      'خیلی خوش‌آمدید',
                       style: TextStyle(
                         fontFamily: 'dana',
                         fontSize: 18,

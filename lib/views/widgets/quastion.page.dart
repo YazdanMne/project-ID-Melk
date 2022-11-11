@@ -11,17 +11,17 @@ class Quastion extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 230, 230, 230),
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
       floatingActionButton: SpeedDial(
         animatedIcon: AnimatedIcons.menu_close,
-        backgroundColor: Colors.red,
+        backgroundColor: Color(0xfa393E46),
         children: [
           SpeedDialChild(
             child: Icon(Icons.home_outlined),
             label: 'خانه',
             onTap: () => Navigator.pop(context),
             labelStyle: TextStyle(fontFamily: 'dana'),
-            backgroundColor: Colors.green,
+            backgroundColor: Color(0xfa6D9886),
             labelBackgroundColor: Colors.white,
           ),
           SpeedDialChild(
@@ -30,14 +30,14 @@ class Quastion extends StatelessWidget {
             onTap: () => Navigator.push(
                 context, MaterialPageRoute(builder: (context) => NotePage())),
             labelStyle: TextStyle(fontFamily: 'dana'),
-            backgroundColor: Colors.cyan,
+            backgroundColor: Color(0xfa6D9886),
             labelBackgroundColor: Colors.white,
           ),
           SpeedDialChild(
             child: Icon(Icons.more_vert_outlined),
             label: 'بیشتر',
             labelStyle: TextStyle(fontFamily: 'dana'),
-            backgroundColor: Colors.cyanAccent,
+            backgroundColor: Color(0xfa6D9886),
             labelBackgroundColor: Colors.white,
           ),
         ],
@@ -56,9 +56,7 @@ class Quastion extends StatelessWidget {
                 ),
                 Align(alignment: Alignment.topRight),
                 ButtonQuastion(),
-                SizedBox(
-                  height: 10,
-                ),
+                SizedBox(height: 10),
                 ButtonQuastionR(),
                 SizedBox(height: 30),
                 ButtonQuastionM(),

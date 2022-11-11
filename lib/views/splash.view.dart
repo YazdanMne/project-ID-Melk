@@ -28,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffE8F9FD),
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
       body: Container(
         child: Center(
           child: Column(
@@ -49,7 +49,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 height: 150,
               ),
               const SpinKitThreeBounce(
-                color: Color(0xffFF1E00),
+                color: Color(0xff393E46),
                 size: 30.0,
               )
             ],
