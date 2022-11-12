@@ -29,6 +29,7 @@ class TextFromAbout extends StatelessWidget {
         borderRadius: BorderRadius.circular(6),
       ),
       child: TextFormField(
+        textAlign: TextAlign.right,
         controller: controller,
         keyboardType: TextInputType.text,
         // ignore: prefer_const_constructors

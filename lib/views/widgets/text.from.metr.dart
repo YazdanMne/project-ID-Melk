@@ -50,10 +50,12 @@ class TextFromMetrazh extends StatelessWidget {
       ),
       child: TextFormField(
         // controller: controller,
-        keyboardType: TextInputType.text,
+        keyboardType: TextInputType.number,
         // ignore: prefer_const_constructors
+        style: TextStyle(fontSize: 19, fontFamily: 'dana'),
+
         decoration: InputDecoration(
-          hintText: '   ',
+          hintText: '',
           hintStyle: TextStyle(
             fontFamily: 'dana',
             fontSize: 35,

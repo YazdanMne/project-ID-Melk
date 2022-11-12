@@ -474,8 +474,8 @@ class HideBtn extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const BuyedUser()));
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => BuyedUser()));
       },
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 25),

@@ -8,7 +8,7 @@ class BacShape extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Color.fromARGB(255, 255, 255, 255),
+      color: Color(0xffF7F7F7),
       shape: SuperellipseShape(
         borderRadius: BorderRadius.circular(0),
       ), // SuperellipseShape
@@ -523,6 +523,68 @@ class BacTxtLrm extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(10),
         child: LoremTxt(),
+      ),
+    );
+  }
+}
+
+// bacground image picker
+
+class ImgPr extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Color.fromARGB(255, 97, 154, 199),
+      shape: SuperellipseShape(
+        borderRadius: BorderRadius.circular(10),
+      ), // SuperellipseShape
+      child: Container(
+        width: 350.0,
+        height: 50.0,
+      ), // Container
+    ); // Material
+  }
+}
+
+class ImportImage extends StatelessWidget {
+  const ImportImage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(10),
+        child: ImgPr(),
+      ),
+    );
+  }
+}
+
+class BacMain extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Color(0xffF7F7F7),
+      shape: SuperellipseShape(
+        borderRadius: BorderRadius.circular(0),
+      ), // SuperellipseShape
+      child: Container(
+        width: 350.0,
+        height: 400.0,
+      ), // Container
+    ); // Material
+  }
+}
+
+class BgMn extends StatelessWidget {
+  const BgMn({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(10),
+        child: BacMain(),
       ),
     );
   }

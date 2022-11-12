@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -13,16 +14,41 @@ import 'package:id_melk_project/views/widgets/text.from.about.dart';
 import 'package:id_melk_project/views/widgets/text.from.metr.dart';
 import 'package:id_melk_project/views/widgets/text.from.year.dart';
 import 'package:id_melk_project/views/widgets/buttton.dital.dart';
+import 'package:image_picker/image_picker.dart';
 
 class BuyedUser extends StatelessWidget {
-  const BuyedUser({Key? key}) : super(key: key);
+  BuyedUser({Key? key}) : super(key: key);
+
+  File? _image;
+
+  Future getImage() async {
+    final image = await ImagePicker().pickImage(source: ImageSource.camera);
+    if (image == null) return;
+
+    final imageTemporary = File(image.path);
+
+    setState(() {
+      this._image = imageTemporary;
+    });
+  }
+
+  Future getGallery() async {
+    final image = await ImagePicker().pickImage(source: ImageSource.gallery);
+    if (image == null) return;
+
+    final imageTemporary = File(image.path);
+
+    setState(() {
+      this._image = imageTemporary;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     final TextEditingController aboutController = TextEditingController();
-    // final TextEditingController metrazhController = TextEditingController();
+
     return Scaffold(
-      backgroundColor: Color(0xffE8F9FD),
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Container(
@@ -43,16 +69,81 @@ class BuyedUser extends StatelessWidget {
                 Center(
                   child: Column(
                     children: [
-                      Image.asset(
-                        'assets/images/import.png',
-                        width: 350,
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child: _image != null
+                            ? Image.file(
+                                _image!,
+                                width: 360,
+                                fit: BoxFit.cover,
+                              )
+                            : Image.network(
+                                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZrDh1_nIqVGWRWqc9sArN8X7Or0tN5qnNeA&usqp=CAU',
+                                width: 360,
+                                fit: BoxFit.cover,
+                              ),
+                      ),
+                      //this import btn
+                      Padding(
+                        padding: new EdgeInsets.only(
+                          left: 18,
+                          top: 7,
+                          bottom: 7,
+                        ),
+                        child: Align(
+                          alignment: Alignment.topLeft,
+                          child: Row(
+                            children: [
+                              // Padding(padding: EdgeInsets.all(5)),
+                              ElevatedButton(
+                                onPressed: () => getImage(),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.camera),
+                                    Text(
+                                      'گرفتن عکس از دوربین',
+                                      style: TextStyle(
+                                        fontFamily: 'dana',
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Color(0xff6D9886),
+                                  minimumSize: Size(50, 40),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              ElevatedButton(
+                                onPressed: () => getGallery(),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.photo_album_outlined),
+                                    Text(
+                                      'انتخاب از آلبوم گوشی',
+                                      style: TextStyle(
+                                        fontFamily: 'dana',
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Color(0xff6D9886),
+                                  minimumSize: Size(50, 40),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                       SizedBox(
                         height: 5,
                       ),
                       Stack(
                         children: [
-                          BacShapeMain(),
+                          BgMn(),
                           Positioned(
                             left: 217,
                             top: 9,
@@ -975,3 +1066,5 @@ class BuyedUser extends StatelessWidget {
     );
   }
 }
+
+void setState(Null Function() param0) {}
