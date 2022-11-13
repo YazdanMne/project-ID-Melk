@@ -50,7 +50,9 @@ class TextFromYears extends StatelessWidget {
       ),
       child: TextFormField(
         // controller: controller,
-        keyboardType: TextInputType.text,
+        keyboardType: TextInputType.number,
+        // ignore: prefer_const_constructors
+        style: TextStyle(fontSize: 19, fontFamily: 'dana'),
         // ignore: prefer_const_constructors
         decoration: InputDecoration(
           hintText: ' سال',

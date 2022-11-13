@@ -43,27 +43,34 @@ class TextFieldAddres extends StatelessWidget {
       width: 330,
       padding: const EdgeInsets.symmetric(horizontal: 0),
       decoration: BoxDecoration(
-        color: Colors.white,
-        boxShadow: [
-          BoxShadow(
-            color: Color.fromARGB(255, 255, 255, 255).withOpacity(0.1),
-            blurRadius: 7,
-          ),
-        ],
-        borderRadius: BorderRadius.circular(6),
+        // color: Color.fromARGB(255, 236, 236, 236),
+        // boxShadow: [
+        //   BoxShadow(
+        //     color: Color.fromARGB(255, 255, 255, 255).withOpacity(0.1),
+        //     blurRadius: 7,
+        //   ),
+        // ],
+        borderRadius: BorderRadius.circular(10),
       ),
       child: TextFormField(
         // controller: controller,
         keyboardType: TextInputType.text,
+
+        textAlign: TextAlign.right,
         // ignore: prefer_const_constructors
         decoration: InputDecoration(
           labelText: 'آدرس',
+
           labelStyle: TextStyle(
             fontFamily: 'dana',
-            fontSize: 20,
+            fontSize: 15,
             locale: Locale("en", "UN"),
           ),
-          border: OutlineInputBorder(borderSide: BorderSide()),
+          // border: OutlineInputBorder(
+          //   borderSide: BorderSide(
+          //     color: Color(0xffF2E7D5),
+          //   ),
+          // ),
         ),
       ),
     );

@@ -2,6 +2,8 @@ import 'dart:io';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:group_button/group_button.dart';
+
 import 'package:id_melk_project/views/widgets/bac.buy.dart';
 import 'package:id_melk_project/views/widgets/bac.main.year.dart';
 import 'package:id_melk_project/views/widgets/bac.of.widget.text.view.dart';
@@ -16,9 +18,14 @@ import 'package:id_melk_project/views/widgets/text.from.year.dart';
 import 'package:id_melk_project/views/widgets/buttton.dital.dart';
 import 'package:image_picker/image_picker.dart';
 
-class BuyedUser extends StatelessWidget {
+class BuyedUser extends StatefulWidget {
   BuyedUser({Key? key}) : super(key: key);
 
+  @override
+  State<BuyedUser> createState() => _BuyedUserState();
+}
+
+class _BuyedUserState extends State<BuyedUser> {
   File? _image;
 
   Future getImage() async {
@@ -213,25 +220,60 @@ class BuyedUser extends StatelessWidget {
                             child: TextFieldAddres(),
                           ),
                           Positioned(
-                            left: 255,
-                            top: 118,
-                            child: ButtonAsansor(),
-                          ),
-                          Positioned(
-                            left: 165,
-                            top: 118,
-                            child: ButtonParking(),
-                          ),
-                          Positioned(
-                            left: 85,
-                            top: 118,
-                            child: ButtonAnbari(),
-                          ),
-                          Positioned(
-                            left: 5,
-                            top: 118,
-                            child: ButtonBalkon(),
-                          ),
+                              left: 25,
+                              top: 118,
+                              child: Column(
+                                children: [
+                                  GroupButton(
+                                    buttons: [
+                                      "بالکن",
+                                      "انباری",
+                                      "پارکینگ",
+                                      "آسانسور",
+                                    ],
+                                    isRadio: false,
+                                    onSelected: (value, index, isSelected) =>
+                                        print('$index button is selected'),
+                                    options: GroupButtonOptions(
+                                      selectedShadow: const [],
+                                      selectedTextStyle: TextStyle(
+                                        // fontSize: 20,
+                                        fontFamily: 'dana',
+                                        color: Color.fromARGB(255, 0, 0, 0),
+                                      ),
+                                      selectedColor:
+                                          Color.fromARGB(130, 109, 152, 134),
+                                      unselectedShadow: const [],
+                                      unselectedColor:
+                                          Color.fromARGB(255, 255, 255, 255),
+                                      unselectedTextStyle: TextStyle(
+                                        fontFamily: 'dana',
+                                        color: Color.fromARGB(255, 0, 0, 0),
+                                      ),
+                                      selectedBorderColor:
+                                          Color.fromARGB(255, 0, 0, 0),
+                                      unselectedBorderColor: Color(0xffF2E7D5),
+                                      borderRadius: BorderRadius.circular(10),
+                                      // spacing: 10,
+                                      // runSpacing: 10,
+                                      // groupingType: GroupingType.wrap,
+                                      // direction: Axis.horizontal,
+                                      // buttonHeight: 60,
+                                      // buttonWidth: 60,
+                                      //   mainGroupAlignment:
+                                      //       MainGroupAlignment.start,
+                                      //   crossGroupAlignment:
+                                      //       CrossGroupAlignment.start,
+                                      //   groupRunAlignment:
+                                      //       GroupRunAlignment.start,
+                                      //   textAlign: TextAlign.center,
+                                      //   textPadding: EdgeInsets.zero,
+                                      //   alignment: Alignment.center,
+                                      //   elevation: 0,
+                                    ),
+                                  ),
+                                ],
+                              )),
                           Positioned(
                             left: 10,
                             top: 172,
@@ -1067,4 +1109,4 @@ class BuyedUser extends StatelessWidget {
   }
 }
 
-void setState(Null Function() param0) {}
+// void setState(Null Function() param0) {}
