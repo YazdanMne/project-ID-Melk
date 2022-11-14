@@ -38,7 +38,7 @@ class BacgruondShape extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Color.fromARGB(255, 211, 211, 211),
+      color: Color(0xffF2E7D5),
       shape: SuperellipseShape(
         borderRadius: BorderRadius.circular(0),
       ), // SuperellipseShape

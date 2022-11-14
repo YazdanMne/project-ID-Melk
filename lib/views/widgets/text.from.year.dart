@@ -206,10 +206,10 @@ class TextFromname extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 40,
-      width: 120,
+      width: 160,
       padding: const EdgeInsets.symmetric(horizontal: 0),
       decoration: BoxDecoration(
-        color: Color.fromARGB(255, 211, 211, 211),
+        color: Color(0xffF2E7D5),
         boxShadow: [
           BoxShadow(
             color: Color.fromARGB(255, 255, 255, 255).withOpacity(0.1),
@@ -222,13 +222,17 @@ class TextFromname extends StatelessWidget {
         // controller: controller,
         keyboardType: TextInputType.text,
         // ignore: prefer_const_constructors
+        style: TextStyle(fontFamily: 'dana'),
+        textAlign: TextAlign.right,
+
         decoration: InputDecoration(
-          hintText: '',
-          hintStyle: TextStyle(
+          labelText: 'نام مشاور',
+          labelStyle: TextStyle(
             fontFamily: 'dana',
-            fontSize: 35,
           ),
-          // border: OutlineInputBorder(borderSide: BorderSide()),
+          border: OutlineInputBorder(
+            borderSide: BorderSide(),
+          ),
         ),
       ),
     );
@@ -248,10 +252,10 @@ class TextFromNumber extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 40,
-      width: 126,
+      width: 150,
       padding: const EdgeInsets.symmetric(horizontal: 0),
       decoration: BoxDecoration(
-        color: Color.fromARGB(255, 211, 211, 211),
+        color: Color(0xffF2E7D5),
         boxShadow: [
           BoxShadow(
             color: Color.fromARGB(255, 255, 255, 255).withOpacity(0.1),
@@ -264,13 +268,11 @@ class TextFromNumber extends StatelessWidget {
         // controller: controller,
         keyboardType: TextInputType.number,
         // ignore: prefer_const_constructors
+        textAlign: TextAlign.right,
         decoration: InputDecoration(
-          hintText: '',
-          hintStyle: TextStyle(
-            fontFamily: 'dana',
-            fontSize: 35,
-          ),
-          //border: OutlineInputBorder(borderSide: BorderSide()),
+          labelText: 'شماره‌همراه',
+          labelStyle: TextStyle(fontFamily: 'dana'),
+          border: OutlineInputBorder(borderSide: BorderSide()),
         ),
       ),
     );

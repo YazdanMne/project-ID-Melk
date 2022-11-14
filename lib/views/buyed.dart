@@ -367,64 +367,48 @@ class _BuyedUserState extends State<BuyedUser> {
                           ),
                         ],
                       ),
+
                       SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        '                                                          مشاور',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontFamily: 'dana',
-                            fontWeight: FontWeight.bold),
-                      ),
-                      SizedBox(
-                        height: 5,
+                        height: 10,
                       ),
                       Stack(
                         children: [
                           MainBac(),
                           Positioned(
-                            left: 310,
-                            top: 10,
+                            left: 290,
+                            top: 0,
                             child: Text(
-                              ':نام',
-                              style:
-                                  TextStyle(fontFamily: 'dana', fontSize: 25),
+                              'مشاور',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20,
+                                  fontFamily: 'dana',
+                                  fontWeight: FontWeight.bold),
                             ),
                           ),
                           Positioned(
-                            left: 190,
-                            top: 10,
+                            left: 180,
+                            top: 40,
                             child: TextFromname(),
                           ),
                           Positioned(
-                            left: 137,
-                            top: 15,
-                            child: Text(
-                              ':شماره',
-                              style:
-                                  TextStyle(fontFamily: 'dana', fontSize: 20),
-                            ),
-                          ),
-                          Positioned(
                             left: 10,
-                            top: 10,
+                            top: 40,
                             child: TextFromNumber(),
                           )
                         ],
                       ),
-                      Padding(
-                        padding: new EdgeInsets.only(
-                          left: 18,
-                          top: 7,
-                          bottom: 7,
-                        ),
-                        child: Align(
-                          alignment: Alignment.topLeft,
-                          child: ButtonMore(),
-                        ),
-                      ),
+                      // Padding(
+                      //   padding: new EdgeInsets.only(
+                      //     left: 18,
+                      //     top: 7,
+                      //     bottom: 7,
+                      //   ),
+                      //   child: Align(
+                      //     alignment: Alignment.topLeft,
+                      //     child: ButtonMore(),
+                      //   ),
+                      // ),
                       Stack(
                         children: [
                           MainBacMore(),
@@ -439,24 +423,67 @@ class _BuyedUserState extends State<BuyedUser> {
                               ),
                             ),
                           ),
+
+                          //butoon more
+
                           Positioned(
-                            left: 160,
-                            top: 10,
-                            child: BtnSalon(),
-                          ),
-                          Positioned(
-                            left: 47,
-                            top: 10,
-                            child: BtnChitken(),
-                          ),
-                          Positioned(
-                            left: 97,
-                            top: 60,
-                            child: BtnBedroom(),
-                          ),
+                              left: 47,
+                              top: 50,
+                              child: Column(
+                                children: [
+                                  GroupButton(
+                                    buttons: [
+                                      "اتاق‌خواب",
+                                      "آشپز خانه",
+                                      "سالن",
+                                    ],
+                                    isRadio: false,
+                                    onSelected: (value, index, isSelected) =>
+                                        print('$index button is selected'),
+                                    options: GroupButtonOptions(
+                                      selectedShadow: const [],
+                                      selectedTextStyle: TextStyle(
+                                        // fontSize: 20,
+                                        fontFamily: 'dana',
+                                        color: Color.fromARGB(255, 0, 0, 0),
+                                      ),
+                                      selectedColor:
+                                          Color.fromARGB(130, 109, 152, 134),
+                                      unselectedShadow: const [],
+                                      unselectedColor:
+                                          Color.fromARGB(255, 255, 0, 0),
+                                      unselectedTextStyle: TextStyle(
+                                        fontFamily: 'dana',
+                                        color:
+                                            Color.fromARGB(255, 255, 255, 255),
+                                      ),
+                                      selectedBorderColor:
+                                          Color.fromARGB(255, 0, 0, 0),
+                                      unselectedBorderColor: Color(0xffF2E7D5),
+                                      borderRadius: BorderRadius.circular(10),
+                                      // spacing: 10,
+                                      // runSpacing: 10,
+                                      // groupingType: GroupingType.wrap,
+                                      // direction: Axis.horizontal,
+                                      // buttonHeight: 60,
+                                      // buttonWidth: 60,
+                                      //   mainGroupAlignment:
+                                      //       MainGroupAlignment.start,
+                                      //   crossGroupAlignment:
+                                      //       CrossGroupAlignment.start,
+                                      //   groupRunAlignment:
+                                      //       GroupRunAlignment.start,
+                                      //   textAlign: TextAlign.center,
+                                      //   textPadding: EdgeInsets.zero,
+                                      //   alignment: Alignment.center,
+                                      //   elevation: 0,
+                                    ),
+                                  ),
+                                ],
+                              )),
                           Positioned(
                             left: 250,
-                            top: 130,
+                            top: 110,
                             child: Text(
                               'دیوار‌مشترک',
                               style: TextStyle(
@@ -465,26 +492,62 @@ class _BuyedUserState extends State<BuyedUser> {
                               ),
                             ),
                           ),
+
                           Positioned(
-                            left: 160,
-                            top: 120,
-                            child: ButtonSalon(),
-                          ),
-                          Positioned(
-                            left: 40,
-                            top: 120,
-                            child: ButtonChitken(),
-                          ),
-                          Positioned(
-                            left: 40,
-                            top: 120,
-                            child: ButtonChitken(),
-                          ),
-                          Positioned(
-                            left: 80,
-                            top: 175,
-                            child: ButtonBedroom(),
-                          ),
+                              left: 47,
+                              top: 138,
+                              child: Column(
+                                children: [
+                                  GroupButton(
+                                    buttons: [
+                                      "اتاق‌خواب",
+                                      "آشپز خانه",
+                                      "سالن",
+                                    ],
+                                    isRadio: false,
+                                    onSelected: (value, index, isSelected) =>
+                                        print('$index button is selected'),
+                                    options: GroupButtonOptions(
+                                      selectedShadow: const [],
+                                      selectedTextStyle: TextStyle(
+                                        // fontSize: 20,
+                                        fontFamily: 'dana',
+                                        color: Color.fromARGB(255, 0, 0, 0),
+                                      ),
+                                      selectedColor:
+                                          Color.fromARGB(130, 109, 152, 134),
+                                      unselectedShadow: const [],
+                                      unselectedColor:
+                                          Color.fromARGB(255, 255, 0, 0),
+                                      unselectedTextStyle: TextStyle(
+                                        fontFamily: 'dana',
+                                        color:
+                                            Color.fromARGB(255, 255, 255, 255),
+                                      ),
+                                      selectedBorderColor:
+                                          Color.fromARGB(255, 0, 0, 0),
+                                      unselectedBorderColor: Color(0xffF2E7D5),
+                                      borderRadius: BorderRadius.circular(10),
+                                      // spacing: 10,
+                                      // runSpacing: 10,
+                                      // groupingType: GroupingType.wrap,
+                                      // direction: Axis.horizontal,
+                                      // buttonHeight: 60,
+                                      // buttonWidth: 60,
+                                      //   mainGroupAlignment:
+                                      //       MainGroupAlignment.start,
+                                      //   crossGroupAlignment:
+                                      //       CrossGroupAlignment.start,
+                                      //   groupRunAlignment:
+                                      //       GroupRunAlignment.start,
+                                      //   textAlign: TextAlign.center,
+                                      //   textPadding: EdgeInsets.zero,
+                                      //   alignment: Alignment.center,
+                                      //   elevation: 0,
+                                    ),
+                                  ),
+                                ],
+                              )),
                         ],
                       ),
                       SizedBox(

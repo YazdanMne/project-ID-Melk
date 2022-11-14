@@ -38,7 +38,7 @@ class BacgroundMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Color.fromARGB(255, 211, 211, 211),
+      color: Color(0xffF2E7D5),
       shape: SuperellipseShape(
         borderRadius: BorderRadius.circular(0),
       ), // SuperellipseShape
@@ -100,13 +100,13 @@ class BacgroundShapeMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Color.fromARGB(255, 255, 255, 255),
+      color: Color(0xffF7F7F7),
       shape: SuperellipseShape(
         borderRadius: BorderRadius.circular(0),
       ), // SuperellipseShape
       child: Container(
         width: 350.0,
-        height: 60.0,
+        height: 100.0,
       ), // Container
     ); // Material
   }
