@@ -4,6 +4,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_stars/flutter_rating_stars.dart';
 import 'package:group_button/group_button.dart';
+import 'package:id_melk_project/views/list.room.dart';
 
 import 'package:id_melk_project/views/widgets/bac.buy.dart';
 import 'package:id_melk_project/views/widgets/bac.main.year.dart';
@@ -28,8 +29,11 @@ class BuyedUser extends StatefulWidget {
 
 class _BuyedUserState extends State<BuyedUser> {
   File? _image;
-  double value = 3.5;
-  double _value = 3.5;
+  double value = 0.0;
+  double _value = 0.0;
+  double _value2 = 0.0;
+  double _value3 = 0.0;
+  double _value4 = 0.0;
 
   Future getImage() async {
     final image = await ImagePicker().pickImage(source: ImageSource.camera);
@@ -1228,16 +1232,62 @@ class _BuyedUserState extends State<BuyedUser> {
                             ),
                           ),
                           Positioned(
-                            left: 210,
+                            left: 200,
                             top: 10,
                             child: Text(
-                              'امتیاز به مشاور',
+                              'امتیاز به مشاعات',
                               style:
                                   TextStyle(fontFamily: 'dana', fontSize: 16),
                             ),
                           ),
                           Positioned(
                             top: 50,
+                            left: 10,
+                            child: RatingStars(
+                              value: _value2,
+                              onValueChanged: (v) {
+                                //
+                                setState(() {
+                                  _value2 = v;
+                                });
+                              },
+                              starBuilder: (index, color) => Icon(
+                                Icons.star,
+                                color: color,
+                              ),
+                              starCount: 5,
+                              starSize: 20,
+                              valueLabelColor: const Color(0xff9b9b9b),
+                              valueLabelTextStyle: const TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w400,
+                                  fontStyle: FontStyle.normal,
+                                  fontFamily: 'dana',
+                                  fontSize: 12.0),
+                              valueLabelRadius: 10,
+                              maxValue: 5,
+                              starSpacing: 2,
+                              maxValueVisibility: true,
+                              valueLabelVisibility: true,
+                              animationDuration: Duration(milliseconds: 1000),
+                              valueLabelPadding: const EdgeInsets.symmetric(
+                                  vertical: 1, horizontal: 8),
+                              valueLabelMargin: const EdgeInsets.only(right: 8),
+                              starOffColor: const Color(0xffe7e8ea),
+                              starColor: Colors.yellow,
+                            ),
+                          ),
+                          Positioned(
+                            left: 230,
+                            top: 50,
+                            child: Text(
+                              'امتیاز به نور',
+                              style:
+                                  TextStyle(fontFamily: 'dana', fontSize: 16),
+                            ),
+                          ),
+                          Positioned(
+                            top: 100,
                             left: 10,
                             child: RatingStars(
                               value: _value,
@@ -1274,10 +1324,101 @@ class _BuyedUserState extends State<BuyedUser> {
                             ),
                           ),
                           Positioned(
-                            left: 220,
-                            top: 50,
+                            left: 205,
+                            top: 100,
                             child: Text(
-                              'امتیاز به خانه',
+                              'امتیاز به منطقه',
+                              style:
+                                  TextStyle(fontFamily: 'dana', fontSize: 16),
+                            ),
+                          ),
+                          Positioned(
+                            top: 150,
+                            left: 10,
+                            child: RatingStars(
+                              value: _value3,
+                              onValueChanged: (v) {
+                                //
+                                setState(() {
+                                  _value3 = v;
+                                });
+                              },
+                              starBuilder: (index, color) => Icon(
+                                Icons.star,
+                                color: color,
+                              ),
+                              starCount: 5,
+                              starSize: 20,
+                              valueLabelColor: const Color(0xff9b9b9b),
+                              valueLabelTextStyle: const TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w400,
+                                  fontStyle: FontStyle.normal,
+                                  fontFamily: 'dana',
+                                  fontSize: 12.0),
+                              valueLabelRadius: 10,
+                              maxValue: 5,
+                              starSpacing: 2,
+                              maxValueVisibility: true,
+                              valueLabelVisibility: true,
+                              animationDuration: Duration(milliseconds: 1000),
+                              valueLabelPadding: const EdgeInsets.symmetric(
+                                  vertical: 1, horizontal: 8),
+                              valueLabelMargin: const EdgeInsets.only(right: 8),
+                              starOffColor: const Color(0xffe7e8ea),
+                              starColor: Colors.yellow,
+                            ),
+                          ),
+                          Positioned(
+                              left: 214,
+                              top: 150,
+                              child: Text(
+                                'امتیاز به مشاور',
+                                style:
+                                    TextStyle(fontFamily: 'dana', fontSize: 16),
+                              )),
+                          Positioned(
+                            top: 200,
+                            left: 10,
+                            child: RatingStars(
+                              value: _value4,
+                              onValueChanged: (v) {
+                                //
+                                setState(() {
+                                  _value4 = v;
+                                });
+                              },
+                              starBuilder: (index, color) => Icon(
+                                Icons.star,
+                                color: color,
+                              ),
+                              starCount: 5,
+                              starSize: 20,
+                              valueLabelColor: const Color(0xff9b9b9b),
+                              valueLabelTextStyle: const TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w400,
+                                  fontStyle: FontStyle.normal,
+                                  fontFamily: 'dana',
+                                  fontSize: 12.0),
+                              valueLabelRadius: 10,
+                              maxValue: 5,
+                              starSpacing: 2,
+                              maxValueVisibility: true,
+                              valueLabelVisibility: true,
+                              animationDuration: Duration(milliseconds: 1000),
+                              valueLabelPadding: const EdgeInsets.symmetric(
+                                  vertical: 1, horizontal: 8),
+                              valueLabelMargin: const EdgeInsets.only(right: 8),
+                              starOffColor: const Color(0xffe7e8ea),
+                              starColor: Colors.yellow,
+                            ),
+                          ),
+                          Positioned(
+                            left: 190,
+                            top: 200,
+                            child: Text(
+                              'حس خوبم به واحد',
                               style:
                                   TextStyle(fontFamily: 'dana', fontSize: 16),
                             ),
@@ -1285,7 +1426,24 @@ class _BuyedUserState extends State<BuyedUser> {
                         ],
                       ),
                       SizedBox(
-                        height: 20,
+                        height: 10,
+                      ),
+                      TextButton(
+                          onPressed: (() {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => PageMain()));
+                          }),
+                          child: Title(
+                              color: Colors.blue,
+                              child: Text(
+                                'ذخیره',
+                                style:
+                                    TextStyle(fontFamily: 'dana', fontSize: 18),
+                              ))),
+                      SizedBox(
+                        height: 10,
                       )
                     ],
                   ),

@@ -292,7 +292,7 @@ class BacMainDtl extends StatelessWidget {
       ), // SuperellipseShape
       child: Container(
         width: 350.0,
-        height: 800.0,
+        height: 690.0,
       ), // Container
     ); // Material
   }
@@ -354,7 +354,7 @@ class BacMainChb extends StatelessWidget {
       ), // SuperellipseShape
       child: Container(
         width: 350.0,
-        height: 285.0,
+        height: 200.0,
       ), // Container
     ); // Material
   }
@@ -662,7 +662,7 @@ class BGStr extends StatelessWidget {
       ), // SuperellipseShape
       child: Container(
         width: 320.0,
-        height: 110.0,
+        height: 240.0,
       ), // Container
     ); // Material
   }
