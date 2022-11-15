@@ -162,7 +162,7 @@ class BacShapeMainMore extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Color.fromARGB(255, 255, 255, 255),
+      color: Color(0xffF7F7F7),
       shape: SuperellipseShape(
         borderRadius: BorderRadius.circular(0),
       ), // SuperellipseShape
@@ -224,7 +224,7 @@ class BacMainSatuse extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Color.fromARGB(255, 232, 232, 232),
+      color: Color(0xffF7F7F7),
       shape: SuperellipseShape(
         borderRadius: BorderRadius.circular(0),
       ), // SuperellipseShape
@@ -286,13 +286,13 @@ class BacMainDtl extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Color.fromARGB(255, 232, 232, 232),
+      color: Color(0xffF7F7F7),
       shape: SuperellipseShape(
         borderRadius: BorderRadius.circular(0),
       ), // SuperellipseShape
       child: Container(
         width: 350.0,
-        height: 297.0,
+        height: 800.0,
       ), // Container
     ); // Material
   }
@@ -585,6 +585,98 @@ class BgMn extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(10),
         child: BacMain(),
+      ),
+    );
+  }
+}
+
+// bg dropdown
+
+class BgDp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Color(0xffF2E7D5),
+      shape: SuperellipseShape(
+        borderRadius: BorderRadius.circular(0),
+      ), // SuperellipseShape
+      child: Container(
+        width: 320.0,
+        height: 70.0,
+      ), // Container
+    ); // Material
+  }
+}
+
+class BgDropdown extends StatelessWidget {
+  const BgDropdown({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(20),
+        child: BgDp(),
+      ),
+    );
+  }
+}
+
+class BgDp2 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Color(0xffF2E7D5),
+      shape: SuperellipseShape(
+        borderRadius: BorderRadius.circular(0),
+      ), // SuperellipseShape
+      child: Container(
+        width: 320.0,
+        height: 110.0,
+      ), // Container
+    ); // Material
+  }
+}
+
+class BgDropdown2 extends StatelessWidget {
+  const BgDropdown2({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(20),
+        child: BgDp2(),
+      ),
+    );
+  }
+}
+
+class BGStr extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Color(0xffF7F7F7),
+      shape: SuperellipseShape(
+        borderRadius: BorderRadius.circular(0),
+      ), // SuperellipseShape
+      child: Container(
+        width: 320.0,
+        height: 110.0,
+      ), // Container
+    ); // Material
+  }
+}
+
+class BgStarBtn extends StatelessWidget {
+  const BgStarBtn({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(20),
+        child: BGStr(),
       ),
     );
   }

@@ -2,6 +2,7 @@ import 'dart:io';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_stars/flutter_rating_stars.dart';
 import 'package:group_button/group_button.dart';
 
 import 'package:id_melk_project/views/widgets/bac.buy.dart';
@@ -27,6 +28,8 @@ class BuyedUser extends StatefulWidget {
 
 class _BuyedUserState extends State<BuyedUser> {
   File? _image;
+  double value = 3.5;
+  double _value = 3.5;
 
   Future getImage() async {
     final image = await ImagePicker().pickImage(source: ImageSource.camera);
@@ -310,7 +313,7 @@ class _BuyedUserState extends State<BuyedUser> {
                           Positioned(
                             top: 230,
                             left: 26,
-                            child: TextFormPriceMain(),
+                            child: TextFieldM(),
                           ),
                           Positioned(
                             left: 10,
@@ -409,6 +412,9 @@ class _BuyedUserState extends State<BuyedUser> {
                       //     child: ButtonMore(),
                       //   ),
                       // ),
+                      SizedBox(
+                        height: 7,
+                      ),
                       Stack(
                         children: [
                           MainBacMore(),
@@ -573,7 +579,7 @@ class _BuyedUserState extends State<BuyedUser> {
                           ),
                           Positioned(
                             left: 250,
-                            top: 70,
+                            top: 65,
                             child: Text(
                               ':تاریخ‌تخلیه',
                               style: TextStyle(
@@ -596,8 +602,13 @@ class _BuyedUserState extends State<BuyedUser> {
                         children: [
                           BacMainDtls(),
                           Positioned(
-                            left: 299,
-                            top: 10,
+                            top: 5,
+                            left: 20,
+                            child: BgDropdown(),
+                          ),
+                          Positioned(
+                            left: 290,
+                            top: 25,
                             child: Text(
                               ':سند',
                               style: TextStyle(
@@ -607,12 +618,18 @@ class _BuyedUserState extends State<BuyedUser> {
                             ),
                           ),
                           Positioned(
-                            left: 200,
-                            child: MyDropDown(),
+                            top: 15,
+                            left: 30,
+                            child: MyDropDowntwoo(),
                           ),
                           Positioned(
-                            left: 150,
-                            top: 10,
+                            top: 80,
+                            left: 20,
+                            child: BgDropdown(),
+                          ),
+                          Positioned(
+                            left: 290,
+                            top: 100,
                             child: Text(
                               ':نما',
                               style: TextStyle(
@@ -622,12 +639,18 @@ class _BuyedUserState extends State<BuyedUser> {
                             ),
                           ),
                           Positioned(
-                            left: 50,
-                            child: MyDropDown(),
+                            top: 90,
+                            left: 30,
+                            child: MyDropDowntwoo(),
                           ),
                           Positioned(
-                            left: 280,
-                            top: 70,
+                            top: 155,
+                            left: 20,
+                            child: BgDropdown(),
+                          ),
+                          Positioned(
+                            left: 276,
+                            top: 176,
                             child: Text(
                               ':کابینت',
                               style: TextStyle(
@@ -637,13 +660,18 @@ class _BuyedUserState extends State<BuyedUser> {
                             ),
                           ),
                           Positioned(
-                            left: 170,
-                            top: 60,
-                            child: MyDropDown(),
+                            left: 25,
+                            top: 165,
+                            child: MyDropDowntwoo(),
                           ),
                           Positioned(
-                            left: 87,
-                            top: 75,
+                            top: 230,
+                            left: 20,
+                            child: BgDropdown(),
+                          ),
+                          Positioned(
+                            left: 260,
+                            top: 249,
                             child: Text(
                               ':جنس‌کف',
                               style: TextStyle(
@@ -653,13 +681,18 @@ class _BuyedUserState extends State<BuyedUser> {
                             ),
                           ),
                           Positioned(
-                            left: 2,
-                            top: 65,
-                            child: MyDropDown(),
+                            left: 30,
+                            top: 240,
+                            child: MyDropDowntwo(),
                           ),
                           Positioned(
-                            left: 270,
-                            top: 130,
+                            top: 305,
+                            left: 20,
+                            child: BgDropdown(),
+                          ),
+                          Positioned(
+                            left: 263,
+                            top: 327,
                             child: Text(
                               ':سرمایش',
                               style: TextStyle(
@@ -669,13 +702,18 @@ class _BuyedUserState extends State<BuyedUser> {
                             ),
                           ),
                           Positioned(
-                            left: 170,
-                            top: 120,
-                            child: MyDropDown(),
+                            left: 30,
+                            top: 315,
+                            child: MyDropDowntwo(),
                           ),
                           Positioned(
-                            left: 100,
-                            top: 135,
+                            top: 380,
+                            left: 20,
+                            child: BgDropdown(),
+                          ),
+                          Positioned(
+                            left: 260,
+                            top: 401,
                             child: Text(
                               ':گرمایش',
                               style: TextStyle(
@@ -685,13 +723,18 @@ class _BuyedUserState extends State<BuyedUser> {
                             ),
                           ),
                           Positioned(
-                            left: 5,
-                            top: 120,
-                            child: MyDropDown(),
+                            left: 30,
+                            top: 390,
+                            child: MyDropDowntwo(),
                           ),
                           Positioned(
-                            left: 270,
-                            top: 190,
+                            top: 455,
+                            left: 20,
+                            child: BgDropdown(),
+                          ),
+                          Positioned(
+                            left: 265,
+                            top: 475,
                             child: Text(
                               ':سرویس',
                               style: TextStyle(
@@ -701,13 +744,18 @@ class _BuyedUserState extends State<BuyedUser> {
                             ),
                           ),
                           Positioned(
-                            left: 167,
-                            top: 175,
-                            child: MyDropDown(),
+                            left: 30,
+                            top: 465,
+                            child: MyDropDowntwo(),
                           ),
                           Positioned(
-                            left: 110,
-                            top: 190,
+                            top: 530,
+                            left: 20,
+                            child: BgDropdown(),
+                          ),
+                          Positioned(
+                            left: 270,
+                            top: 551,
                             child: Text(
                               ':آب‌گرم',
                               style: TextStyle(
@@ -717,13 +765,18 @@ class _BuyedUserState extends State<BuyedUser> {
                             ),
                           ),
                           Positioned(
-                            left: 7,
-                            top: 175,
-                            child: MyDropDown(),
+                            left: 30,
+                            top: 540,
+                            child: MyDropDowntwo(),
                           ),
                           Positioned(
-                            left: 150,
-                            top: 250,
+                            top: 605,
+                            left: 20,
+                            child: BgDropdown(),
+                          ),
+                          Positioned(
+                            left: 200,
+                            top: 625,
                             child: Text(
                               ':موقعیت ساختمان',
                               style: TextStyle(
@@ -733,10 +786,20 @@ class _BuyedUserState extends State<BuyedUser> {
                             ),
                           ),
                           Positioned(
-                            left: 50,
-                            top: 240,
-                            child: MyDropDown(),
+                            left: 30,
+                            top: 615,
+                            child: MyDropDowntw(),
                           ),
+                          // Positioned(
+                          //   top: 680,
+                          //   left: 20,
+                          //   child: BgDropdown2(),
+                          // ),
+                          // Positioned(
+                          //   top: 680,
+                          //   left: 20,
+                          //   child: MultiSelectDropDownScreen(),
+                          // ),
                         ],
                       ),
                       Padding(
@@ -1101,42 +1164,11 @@ class _BuyedUserState extends State<BuyedUser> {
                       SizedBox(
                         height: 10,
                       ),
-                      Stack(
-                        children: [
-                          Image.asset(
-                            'assets/images/massage.png',
-                            width: 370,
-                          ),
-                          MasageBtn(),
-                          Positioned(
-                            left: 85,
-                            top: 98,
-                            child: TxtFmMassage(),
-                          ),
-                        ],
-                      ),
+
                       SizedBox(
                         height: 10,
                       ),
-                      Stack(
-                        children: [
-                          Image.asset(
-                            'assets/images/map.png',
-                            width: 380,
-                          ),
-                          Positioned(
-                            left: 40,
-                            top: 10,
-                            child: Text(
-                              'مکان دقیق ساختمان را روی نقشه مشخص کنید',
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontFamily: 'dana',
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
+
                       Padding(
                         padding: new EdgeInsets.only(
                           right: 22,
@@ -1155,11 +1187,106 @@ class _BuyedUserState extends State<BuyedUser> {
                           ),
                         ),
                       ),
-                      Image.asset(
-                        'assets/images/socer.png',
-                        width: 370,
+                      Stack(
+                        children: [
+                          BgStarBtn(),
+                          Positioned(
+                            top: 10,
+                            left: 10,
+                            child: RatingStars(
+                              value: value,
+                              onValueChanged: (v) {
+                                //
+                                setState(() {
+                                  value = v;
+                                });
+                              },
+                              starBuilder: (index, color) => Icon(
+                                Icons.star,
+                                color: color,
+                              ),
+                              starCount: 5,
+                              starSize: 20,
+                              valueLabelColor: const Color(0xff9b9b9b),
+                              valueLabelTextStyle: const TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w400,
+                                  fontStyle: FontStyle.normal,
+                                  fontFamily: 'dana',
+                                  fontSize: 12.0),
+                              valueLabelRadius: 10,
+                              maxValue: 5,
+                              starSpacing: 2,
+                              maxValueVisibility: true,
+                              valueLabelVisibility: true,
+                              animationDuration: Duration(milliseconds: 1000),
+                              valueLabelPadding: const EdgeInsets.symmetric(
+                                  vertical: 1, horizontal: 8),
+                              valueLabelMargin: const EdgeInsets.only(right: 8),
+                              starOffColor: const Color(0xffe7e8ea),
+                              starColor: Colors.yellow,
+                            ),
+                          ),
+                          Positioned(
+                            left: 210,
+                            top: 10,
+                            child: Text(
+                              'امتیاز به مشاور',
+                              style:
+                                  TextStyle(fontFamily: 'dana', fontSize: 16),
+                            ),
+                          ),
+                          Positioned(
+                            top: 50,
+                            left: 10,
+                            child: RatingStars(
+                              value: _value,
+                              onValueChanged: (v) {
+                                //
+                                setState(() {
+                                  _value = v;
+                                });
+                              },
+                              starBuilder: (index, color) => Icon(
+                                Icons.star,
+                                color: color,
+                              ),
+                              starCount: 5,
+                              starSize: 20,
+                              valueLabelColor: const Color(0xff9b9b9b),
+                              valueLabelTextStyle: const TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w400,
+                                  fontStyle: FontStyle.normal,
+                                  fontFamily: 'dana',
+                                  fontSize: 12.0),
+                              valueLabelRadius: 10,
+                              maxValue: 5,
+                              starSpacing: 2,
+                              maxValueVisibility: true,
+                              valueLabelVisibility: true,
+                              animationDuration: Duration(milliseconds: 1000),
+                              valueLabelPadding: const EdgeInsets.symmetric(
+                                  vertical: 1, horizontal: 8),
+                              valueLabelMargin: const EdgeInsets.only(right: 8),
+                              starOffColor: const Color(0xffe7e8ea),
+                              starColor: Colors.yellow,
+                            ),
+                          ),
+                          Positioned(
+                            left: 220,
+                            top: 50,
+                            child: Text(
+                              'امتیاز به خانه',
+                              style:
+                                  TextStyle(fontFamily: 'dana', fontSize: 16),
+                            ),
+                          ),
+                        ],
                       ),
-                      ButtonSaver(),
+                      SizedBox(
+                        height: 20,
+                      )
                     ],
                   ),
                 ),
@@ -1171,5 +1298,3 @@ class _BuyedUserState extends State<BuyedUser> {
     );
   }
 }
-
-// void setState(Null Function() param0) {}

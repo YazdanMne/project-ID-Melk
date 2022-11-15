@@ -1,3 +1,4 @@
+import 'package:currency_textfield/currency_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:id_melk_project/views/widgets/bac.buy.dart';
 
@@ -68,16 +69,19 @@ class TextFromYears extends StatelessWidget {
 }
 
 class TextFormPriceMain extends StatelessWidget {
-  const TextFormPriceMain({
+  TextFormPriceMain({
     Key? key,
   }) : super(key: key);
 
   // final TextEditingController controller;
   // final String text;
   // final TextInputType textInputType;
+  final CurrencyTextFieldController _controller = CurrencyTextFieldController();
 
   @override
   Widget build(BuildContext context) {
+    var controller = CurrencyTextFieldController(
+        rightSymbol: "ريال", decimalSymbol: ",", thousandSymbol: ",");
     return Container(
       height: 40,
       width: 250,
@@ -94,7 +98,60 @@ class TextFormPriceMain extends StatelessWidget {
       ),
       child: TextFormField(
         // controller: controller,
+        controller: _controller,
         keyboardType: TextInputType.number,
+
+        style: TextStyle(fontFamily: 'dana'),
+        // ignore: prefer_const_constructors
+        decoration: InputDecoration(
+          labelText: '',
+          labelStyle: TextStyle(
+            fontFamily: 'dana',
+            // fontSize: 35,
+          ),
+          border: OutlineInputBorder(borderSide: BorderSide()),
+        ),
+      ),
+    );
+  }
+}
+
+//metrazh
+
+class TextFieldM extends StatelessWidget {
+  TextFieldM({
+    Key? key,
+  }) : super(key: key);
+
+  // final TextEditingController controller;
+  // final String text;
+  // final TextInputType textInputType;
+  // final CurrencyTextFieldController _controller = CurrencyTextFieldController();
+
+  @override
+  Widget build(BuildContext context) {
+    //var controller = CurrencyTextFieldController(
+    // rightSymbol: "ريال", decimalSymbol: ",", thousandSymbol: ",");
+    return Container(
+      height: 40,
+      width: 250,
+      padding: const EdgeInsets.symmetric(horizontal: 0),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            color: Color.fromARGB(255, 255, 255, 255).withOpacity(0.1),
+            blurRadius: 7,
+          ),
+        ],
+        borderRadius: BorderRadius.circular(5),
+      ),
+      child: TextFormField(
+        // controller: controller,
+        // controller: _controller,
+        keyboardType: TextInputType.number,
+
+        style: TextStyle(fontFamily: 'dana'),
         // ignore: prefer_const_constructors
         decoration: InputDecoration(
           labelText: '',
@@ -137,6 +194,7 @@ class TextFromTabaghe extends StatelessWidget {
       child: TextFormField(
         // controller: controller,
         keyboardType: TextInputType.number,
+        style: TextStyle(fontFamily: 'dana'),
         // ignore: prefer_const_constructors
         decoration: InputDecoration(
           labelText: '',
@@ -179,6 +237,7 @@ class TextFromVahed extends StatelessWidget {
       child: TextFormField(
         // controller: controller,
         keyboardType: TextInputType.number,
+        style: TextStyle(fontFamily: 'dana'),
         // ignore: prefer_const_constructors
         decoration: InputDecoration(
           labelText: '',
@@ -267,6 +326,7 @@ class TextFromNumber extends StatelessWidget {
       child: TextFormField(
         // controller: controller,
         keyboardType: TextInputType.number,
+        style: TextStyle(fontFamily: 'dana'),
         // ignore: prefer_const_constructors
         textAlign: TextAlign.right,
         decoration: InputDecoration(
@@ -295,7 +355,7 @@ class TextFromExit extends StatelessWidget {
       width: 126,
       padding: const EdgeInsets.symmetric(horizontal: 0),
       decoration: BoxDecoration(
-        color: Color.fromARGB(255, 211, 211, 211),
+        color: Color(0xffF2E7D5),
         boxShadow: [
           BoxShadow(
             color: Color.fromARGB(255, 255, 255, 255).withOpacity(0.1),
@@ -307,14 +367,15 @@ class TextFromExit extends StatelessWidget {
       child: TextFormField(
         // controller: controller,
         keyboardType: TextInputType.datetime,
+        style: TextStyle(fontFamily: 'dana'),
         // ignore: prefer_const_constructors
         decoration: InputDecoration(
-          hintText: '      yy/mm/dd',
+          hintText: '',
           hintStyle: TextStyle(
             fontFamily: 'dana',
-            fontSize: 15,
+            fontSize: 10,
           ),
-          //border: OutlineInputBorder(borderSide: BorderSide()),
+          border: OutlineInputBorder(borderSide: BorderSide()),
         ),
       ),
     );

@@ -4,6 +4,7 @@ import 'package:id_melk_project/views/home_page.dart';
 import 'package:id_melk_project/views/not.page.dart';
 import 'package:id_melk_project/views/widgets/bac.of.widget.text.view.dart';
 import 'package:id_melk_project/views/widgets/button.global.dart';
+import 'package:id_melk_project/views/widgets/drop.down.field.dart';
 
 class Quastion extends StatelessWidget {
   const Quastion({Key? key}) : super(key: key);
@@ -54,6 +55,7 @@ class Quastion extends StatelessWidget {
                 SizedBox(
                   height: 100,
                 ),
+                // MultiSelectDropDownScreen(),
                 Align(alignment: Alignment.topRight),
                 ButtonQuastion(),
                 SizedBox(height: 10),
@@ -72,7 +74,7 @@ class Quastion extends StatelessWidget {
                 ),
                 SizedBox(
                   height: 30,
-                )
+                ),
               ],
             ),
           ),
