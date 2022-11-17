@@ -123,6 +123,9 @@ class TextFieldM extends StatelessWidget {
     Key? key,
   }) : super(key: key);
 
+  var controller = CurrencyTextFieldController(
+      rightSymbol: "", decimalSymbol: ",", thousandSymbol: ",");
+
   // final TextEditingController controller;
   // final String text;
   // final TextInputType textInputType;
@@ -147,7 +150,7 @@ class TextFieldM extends StatelessWidget {
         borderRadius: BorderRadius.circular(5),
       ),
       child: TextFormField(
-        // controller: controller,
+        controller: controller,
         // controller: _controller,
         keyboardType: TextInputType.number,
 
