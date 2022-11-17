@@ -81,7 +81,7 @@ class TextFormPriceMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var controller = CurrencyTextFieldController(
-        rightSymbol: "ريال", decimalSymbol: ",", thousandSymbol: ",");
+        rightSymbol: "", decimalSymbol: ",", thousandSymbol: ",");
     return Container(
       height: 40,
       width: 250,
@@ -98,7 +98,7 @@ class TextFormPriceMain extends StatelessWidget {
       ),
       child: TextFormField(
         // controller: controller,
-        controller: _controller,
+        controller: controller,
         keyboardType: TextInputType.number,
 
         style: TextStyle(fontFamily: 'dana'),
@@ -425,19 +425,21 @@ class TxtFmMassage extends StatelessWidget {
 }
 
 class TextFromeRentPrice extends StatelessWidget {
-  const TextFromeRentPrice({
+  TextFromeRentPrice({
     Key? key,
   }) : super(key: key);
 
   // final TextEditingController controller;
   // final String text;
   // final TextInputType textInputType;
+  var controller = CurrencyTextFieldController(
+      rightSymbol: "", decimalSymbol: ",", thousandSymbol: ",");
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 40,
-      width: 120,
+      width: 160,
       padding: const EdgeInsets.symmetric(horizontal: 0),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -450,11 +452,12 @@ class TextFromeRentPrice extends StatelessWidget {
         borderRadius: BorderRadius.circular(5),
       ),
       child: TextFormField(
-        // controller: controller,
+        controller: controller,
         keyboardType: TextInputType.number,
+        style: TextStyle(fontFamily: 'dana'),
         // ignore: prefer_const_constructors
         decoration: InputDecoration(
-          labelText: '',
+          labelText: 'رهن',
           labelStyle: TextStyle(
             fontFamily: 'dana',
             // fontSize: 35,
@@ -467,9 +470,12 @@ class TextFromeRentPrice extends StatelessWidget {
 }
 
 class TextFromeEjarePrice extends StatelessWidget {
-  const TextFromeEjarePrice({
+  TextFromeEjarePrice({
     Key? key,
   }) : super(key: key);
+
+  var controller = CurrencyTextFieldController(
+      rightSymbol: "", decimalSymbol: ",", thousandSymbol: ",");
 
   // final TextEditingController controller;
   // final String text;
@@ -479,7 +485,7 @@ class TextFromeEjarePrice extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 40,
-      width: 100,
+      width: 155,
       padding: const EdgeInsets.symmetric(horizontal: 0),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -492,11 +498,12 @@ class TextFromeEjarePrice extends StatelessWidget {
         borderRadius: BorderRadius.circular(5),
       ),
       child: TextFormField(
-        // controller: controller,
+        controller: controller,
         keyboardType: TextInputType.number,
+        style: TextStyle(fontFamily: 'dana'),
         // ignore: prefer_const_constructors
         decoration: InputDecoration(
-          labelText: '',
+          labelText: 'اجاره',
           labelStyle: TextStyle(
             fontFamily: 'dana',
             // fontSize: 35,

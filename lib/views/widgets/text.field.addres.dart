@@ -55,7 +55,7 @@ class TextFieldAddres extends StatelessWidget {
       child: TextFormField(
         // controller: controller,
         keyboardType: TextInputType.text,
-
+        style: TextStyle(fontFamily: 'dana'),
         textAlign: TextAlign.right,
         // ignore: prefer_const_constructors
         decoration: InputDecoration(
