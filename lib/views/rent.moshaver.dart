@@ -134,7 +134,7 @@ class _RentMoshaverState extends State<RentMoshaver> {
                       //this import btn
                       Padding(
                         padding: new EdgeInsets.only(
-                          left: 18,
+                          left: 130,
                           top: 7,
                           bottom: 7,
                         ),
@@ -147,9 +147,9 @@ class _RentMoshaverState extends State<RentMoshaver> {
                                 onPressed: () => getImage(),
                                 child: Row(
                                   children: [
-                                    Icon(Icons.camera),
+                                    Icon(Icons.add_a_photo),
                                     Text(
-                                      'گرفتن عکس از دوربین',
+                                      '',
                                       style: TextStyle(
                                         fontFamily: 'dana',
                                       ),
@@ -168,9 +168,9 @@ class _RentMoshaverState extends State<RentMoshaver> {
                                 onPressed: () => getGallery(),
                                 child: Row(
                                   children: [
-                                    Icon(Icons.photo_album_outlined),
+                                    Icon(Icons.add_photo_alternate_sharp),
                                     Text(
-                                      'انتخاب از آلبوم گوشی',
+                                      '',
                                       style: TextStyle(
                                         fontFamily: 'dana',
                                       ),

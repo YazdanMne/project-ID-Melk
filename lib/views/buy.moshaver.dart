@@ -129,7 +129,7 @@ class _BuyMoshaverState extends State<BuyMoshaver> {
                       //this import btn
                       Padding(
                         padding: new EdgeInsets.only(
-                          left: 18,
+                          left: 130,
                           top: 7,
                           bottom: 7,
                         ),
@@ -142,9 +142,9 @@ class _BuyMoshaverState extends State<BuyMoshaver> {
                                 onPressed: () => getImage(),
                                 child: Row(
                                   children: [
-                                    Icon(Icons.camera),
+                                    Icon(Icons.add_a_photo),
                                     Text(
-                                      'گرفتن عکس از دوربین',
+                                      '',
                                       style: TextStyle(
                                         fontFamily: 'dana',
                                       ),
@@ -163,9 +163,9 @@ class _BuyMoshaverState extends State<BuyMoshaver> {
                                 onPressed: () => getGallery(),
                                 child: Row(
                                   children: [
-                                    Icon(Icons.photo_album_outlined),
+                                    Icon(Icons.add_photo_alternate),
                                     Text(
-                                      'انتخاب از آلبوم گوشی',
+                                      '',
                                       style: TextStyle(
                                         fontFamily: 'dana',
                                       ),
