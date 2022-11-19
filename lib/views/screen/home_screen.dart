@@ -40,7 +40,8 @@ class _HomeScreenState extends State<HomeScreen> {
           SpeedDialChild(
             child: Icon(Icons.home_outlined),
             label: 'خانه',
-            onTap: () => Navigator.pop(context),
+            onTap: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => HomePageMain())),
             labelStyle: TextStyle(fontFamily: 'dana'),
             backgroundColor: Color(0xfa6D9886),
             labelBackgroundColor: Colors.white,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:id_melk_project/views/home_page.dart';
 import 'package:id_melk_project/views/not.page.dart';
+import 'package:id_melk_project/views/screen/home_screen.dart';
 import 'package:id_melk_project/views/widgets/bac.of.widget.text.view.dart';
 import 'package:id_melk_project/views/widgets/button.global.dart';
 import 'package:id_melk_project/views/widgets/drop.down.field.dart';
@@ -29,7 +30,7 @@ class Quastion extends StatelessWidget {
             child: Icon(Icons.edit),
             label: 'یادداشت ها',
             onTap: () => Navigator.push(
-                context, MaterialPageRoute(builder: (context) => NotePage())),
+                context, MaterialPageRoute(builder: (context) => HomeScreen())),
             labelStyle: TextStyle(fontFamily: 'dana'),
             backgroundColor: Color(0xfa6D9886),
             labelBackgroundColor: Colors.white,
@@ -37,6 +38,8 @@ class Quastion extends StatelessWidget {
           SpeedDialChild(
             child: Icon(Icons.more_vert_outlined),
             label: 'بیشتر',
+            onTap: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => SettingPage())),
             labelStyle: TextStyle(fontFamily: 'dana'),
             backgroundColor: Color(0xfa6D9886),
             labelBackgroundColor: Colors.white,

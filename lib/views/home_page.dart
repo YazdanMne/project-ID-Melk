@@ -56,6 +56,8 @@ class HomePageMain extends StatelessWidget {
             SpeedDialChild(
               child: Icon(Icons.more_vert_outlined),
               label: 'بیشتر',
+              onTap: () => Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => SettingPage())),
               labelStyle: TextStyle(fontFamily: 'dana'),
               backgroundColor: Color(0xfa6D9886),
               labelBackgroundColor: Colors.white,

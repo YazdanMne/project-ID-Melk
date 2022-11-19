@@ -4,57 +4,54 @@ import 'package:id_melk_project/views/home_page.dart';
 import 'package:id_melk_project/views/widgets/quastion.page.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-class NotePage extends StatelessWidget {
-  const NotePage({Key? key}) : super(key: key);
+class SettingPage extends StatelessWidget {
+  const SettingPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        floatingActionButton: SpeedDial(
-          animatedIcon: AnimatedIcons.menu_close,
-          backgroundColor: Colors.red,
-          children: [
-            SpeedDialChild(
-              child: Icon(Icons.add),
-              label: 'افزودن فایل',
-              onTap: () => Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const Quastion())),
-              labelStyle: TextStyle(fontFamily: 'dana'),
-              backgroundColor: Colors.green,
-              labelBackgroundColor: Colors.white,
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: SafeArea(
+          child: Column(
+        children: [
+          Padding(padding: EdgeInsets.only(top: 10)),
+          Center(
+            child: Text(
+              'تنظیمات',
+              style: TextStyle(fontFamily: 'dana', fontSize: 17),
             ),
-            SpeedDialChild(
-              child: Icon(Icons.home_outlined),
-              label: 'خانه',
-              onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const HomePageMain())),
-              labelStyle: TextStyle(fontFamily: 'dana'),
-              backgroundColor: Colors.cyan,
-              labelBackgroundColor: Colors.white,
-            ),
-            SpeedDialChild(
-              child: Icon(Icons.more_vert_outlined),
-              label: 'بیشتر',
-              labelStyle: TextStyle(fontFamily: 'dana'),
-              backgroundColor: Colors.cyanAccent,
-              labelBackgroundColor: Colors.white,
-            ),
-          ],
-        ),
-        body: SafeArea(
-          child: Stack(
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              WebView(
-                initialUrl: 'https://platformboy.com/platy-paper/',
-                javascriptMode: JavascriptMode.unrestricted,
-              ),
+              TextButton.icon(
+                  onPressed: () {},
+                  icon: Icon(Icons.arrow_back),
+                  label: Text(
+                    'خروج از حساب کاربری',
+                    style: TextStyle(fontFamily: 'dana'),
+                  ))
             ],
           ),
-        ),
-      ),
+          Column(
+            children: [
+              SizedBox(
+                height: 600,
+              ),
+              Text(
+                  '    تمامی حقوق این اپلیکیشن برای \n© شرکت آیدی ملک محفوظ می‌باشد',
+                  style: TextStyle(fontFamily: 'dana')),
+              SizedBox(height: 50),
+              Text(
+                '«From ID MELK 2022 ©»',
+              ),
+              SizedBox(
+                height: 30,
+              ),
+            ],
+          )
+        ],
+      )),
     );
   }
 }
