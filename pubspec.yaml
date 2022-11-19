@@ -51,6 +51,7 @@ dependencies:
   currency_textfield: ^2.0.0
   multi_select_flutter: ^4.1.2
   flutter_rating_stars: ^1.0.3+4
+  
 
 
 
