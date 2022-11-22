@@ -36,7 +36,7 @@ class SettingPage extends StatelessWidget {
           Column(
             children: [
               SizedBox(
-                height: 600,
+                height: 300,
               ),
               Text(
                   '    تمامی حقوق این اپلیکیشن برای \n© شرکت آیدی ملک محفوظ می‌باشد',

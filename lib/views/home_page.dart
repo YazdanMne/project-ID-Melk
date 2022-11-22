@@ -30,6 +30,7 @@ class HomePageMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         floatingActionButton: SpeedDial(
           animatedIcon: AnimatedIcons.menu_close,
